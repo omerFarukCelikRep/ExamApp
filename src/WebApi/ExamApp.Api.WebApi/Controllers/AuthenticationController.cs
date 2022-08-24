@@ -7,10 +7,12 @@ using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using ExamApp.Domain.Common;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ExamApp.Api.WebApi.Controllers;
 
 [Route("auth")]
+[AllowAnonymous]
 public class AuthenticationController : ApiController
 {
     private readonly ISender _mediator;
